@@ -23,16 +23,12 @@ export class RedisService implements OnModuleInit {
     const keysConversion = await this.cacheManager.store.keys('conversion:*');
     if (keys.length == 0) {
       await this.insertDataInit(data);
-      const values = await this.cacheManager.store.mget(...keys);
-      console.log(values);
+      await this.cacheManager.store.mget(...keys);
     }
     if (keysConversion.length == 0) {
       await this.insertDataInit(dataConversion);
-      const values = await this.cacheManager.store.mget(...keysConversion);
-      console.log(values);
+      await this.cacheManager.store.mget(...keysConversion);
     }
-    console.log(keys);
-    console.log(keysConversion);
   }
   async getData(key: string) {
     const data = (await this.cacheManager.get(key)) as string;
@@ -54,7 +50,6 @@ export class RedisService implements OnModuleInit {
 
   async allDataObject(query: string) {
     const keys = await this.cacheManager.store.keys(query);
-    console.log(keys);
     if (keys.length == 0) return;
     const values = await this.cacheManager.store.mget(...keys);
     const combinedArray = keys.map((key, index) => ({
