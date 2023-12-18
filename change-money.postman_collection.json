@@ -1,0 +1,617 @@
+{
+	"info": {
+		"_postman_id": "b8e8899e-d11f-412b-8e79-1a543b856ef1",
+		"name": "change-money",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26679067",
+		"_collection_link": "https://galactic-crater-842893.postman.co/workspace/team-projects~7413a6b8-fda4-4a63-bde2-e1aa36558acf/collection/26679067-b8e8899e-d11f-412b-8e79-1a543b856ef1?action=share&source=collection_link&creator=26679067"
+	},
+	"item": [
+		{
+			"name": "type change",
+			"item": [
+				{
+					"name": "all type-change",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXpvIiwiaWF0IjoxNzAyOTE0MDUxLCJleHAiOjE3MDQ5ODc2NTF9.hO6okAJJul7-5609psx3fBF2QcAT3Di7BZ0YhY7RbBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-change-money}}/currency-conversion/type-change",
+							"host": [
+								"{{url-change-money}}"
+							],
+							"path": [
+								"currency-conversion",
+								"type-change"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all type-change",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url-change-money}}/currency-conversion/type-change",
+									"host": [
+										"{{url-change-money}}"
+									],
+									"path": [
+										"currency-conversion",
+										"type-change"
+									]
+								}
+							},
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"key\": \"conversion:mxn:pen\",\n        \"value\": 0.22\n    },\n    {\n        \"key\": \"conversion:usd:pen\",\n        \"value\": 3.76\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "update type-change",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXpvIiwiaWF0IjoxNzAyOTE0MDUxLCJleHAiOjE3MDQ5ODc2NTF9.hO6okAJJul7-5609psx3fBF2QcAT3Di7BZ0YhY7RbBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 3.76,\r\n    \"sourceCurrency\": \"usd\",\r\n    \"targetCurrency\": \"pen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-change-money}}/currency-conversion/type-change",
+							"host": [
+								"{{url-change-money}}"
+							],
+							"path": [
+								"currency-conversion",
+								"type-change"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update type-change",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 3.76,\r\n    \"sourceCurrency\": \"usd\",\r\n    \"targetCurrency\": \"pen\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-change-money}}/currency-conversion/type-change",
+									"host": [
+										"{{url-change-money}}"
+									],
+									"path": [
+										"currency-conversion",
+										"type-change"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "create type-change",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXpvIiwiaWF0IjoxNzAyOTE0MDUxLCJleHAiOjE3MDQ5ODc2NTF9.hO6okAJJul7-5609psx3fBF2QcAT3Di7BZ0YhY7RbBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 0.22,\r\n    \"sourceCurrency\": \"mxn\",\r\n    \"targetCurrency\": \"pen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-change-money}}/currency-conversion/type-change",
+							"host": [
+								"{{url-change-money}}"
+							],
+							"path": [
+								"currency-conversion",
+								"type-change"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create type-change",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 0.22,\r\n    \"sourceCurrency\": \"mxn\",\r\n    \"targetCurrency\": \"pen\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/currency-conversion/type-change",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"currency-conversion",
+										"type-change"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "conversion",
+			"item": [
+				{
+					"name": "currency-conversion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXpvIiwiaWF0IjoxNzAyOTE0MDUxLCJleHAiOjE3MDQ5ODc2NTF9.hO6okAJJul7-5609psx3fBF2QcAT3Di7BZ0YhY7RbBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":190.203232,\r\n    \"sourceCurrency\":\"mxn\",\r\n    \"targetCurrency\":\"pen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-change-money}}/currency-conversion",
+							"host": [
+								"{{url-change-money}}"
+							],
+							"path": [
+								"currency-conversion"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "currency-conversion",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\":190.203232,\r\n    \"sourceCurrency\":\"mxn\",\r\n    \"targetCurrency\":\"pen\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-change-money}}/currency-conversion",
+									"host": [
+										"{{url-change-money}}"
+									],
+									"path": [
+										"currency-conversion"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"amount\": 190.203232,\n    \"sourceCurrency\": \"mxn\",\n    \"targetCurrency\": \"pen\",\n    \"amountChange\": \"35.86959213895781637639718784\",\n    \"typeChange\": \"0.18858560794044665012\"\n}"
+						}
+					]
+				},
+				{
+					"name": "hisorial conversion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXpvIiwiaWF0IjoxNzAyOTE0MDUxLCJleHAiOjE3MDQ5ODc2NTF9.hO6okAJJul7-5609psx3fBF2QcAT3Di7BZ0YhY7RbBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-change-money}}/currency-conversion",
+							"host": [
+								"{{url-change-money}}"
+							],
+							"path": [
+								"currency-conversion"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "hisorial conversion",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-change-money}}/currency-conversion",
+									"host": [
+										"{{url-change-money}}"
+									],
+									"path": [
+										"currency-conversion"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"key\": \"change:jamzo:6124\",\n        \"value\": {\n            \"amount\": 190.203232,\n            \"sourceCurrency\": \"mxn\",\n            \"targetCurrency\": \"pen\",\n            \"amountChange\": \"35.86959213895781637639718784\",\n            \"typeChange\": \"0.18858560794044665012\"\n        }\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"jose\",\r\n    \"username\":\"jamzo\",\r\n    \"lastName\":\"montenegro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-change-money}}/users",
+							"host": [
+								"{{url-change-money}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"jose\",\r\n    \"username\":\"jamz\",\r\n    \"lastName\":\"montenegro\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-change-money}}/users",
+									"host": [
+										"{{url-change-money}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXpvIiwiaWF0IjoxNzAyOTE0MDUxLCJleHAiOjE3MDQ5ODc2NTF9.hO6okAJJul7-5609psx3fBF2QcAT3Di7BZ0YhY7RbBo\",\n    \"firstName\": \"jose\",\n    \"username\": \"jamzo\",\n    \"lastName\": \"montenegro\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXpvIiwiaWF0IjoxNzAyOTE0MDUxLCJleHAiOjE3MDQ5ODc2NTF9.hO6okAJJul7-5609psx3fBF2QcAT3Di7BZ0YhY7RbBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"jamz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url-change-money}}/users/",
+							"host": [
+								"{{url-change-money}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"jamz\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-change-money}}/users/",
+									"host": [
+										"{{url-change-money}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"firstName\": \"jose\",\n    \"username\": \"jamz\",\n    \"lastName\": \"montenegro\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "get token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXpvcyIsImlhdCI6MTcwMjg4OTYxNywiZXhwIjoxNzA0OTYzMjE3fQ.LEEk-BV5JzrOdW3TWLHwZfBQqy5mj6DXOY_zqCZsBWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"jamzos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"jamzos\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url-change-money}}/auth/token",
+									"host": [
+										"{{url-change-money}}"
+									],
+									"path": [
+										"auth",
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJuYW1lOmphbXoiLCJpYXQiOjE3MDI5MTQyNjksImV4cCI6MTcwNDk4Nzg2OX0.Vk2bi8S2qKuomkhaV2DGN1XbVcSBU7WWsIIrQ_2N_kc\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
