@@ -34,10 +34,11 @@ export class UsersService {
   }
 
   async findUser(username: string) {
+    if (!username) {
+      throw new BadRequestException(`username is required`);
+    }
     const data = this.redisClient.getDataObject(`username:${username}`);
 
     return data;
-    // this.redisClient.consultData();
-    // return username;
   }
 }
