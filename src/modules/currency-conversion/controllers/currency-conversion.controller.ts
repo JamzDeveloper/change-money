@@ -4,6 +4,7 @@ import { CreateCurrencyConversionDto } from '../dtos/create-curreny-conversion.d
 import { JwtAuthGuard } from 'src/auth/guards/auth-jwt.guard';
 import { CurrentUser } from 'src/auth/decorator/current-user.decorator';
 import { User } from 'src/modules/users/model';
+import { CreateTypeChangeDto } from '../dtos/create-type-change.dto';
 
 @Controller('currency-conversion')
 @UseGuards(JwtAuthGuard)
@@ -22,5 +23,14 @@ export class CurrencyConversionController {
     @Body() dataConversion: CreateCurrencyConversionDto,
   ) {
     return this.currencyConversionService.conversion(dataConversion, user);
+  }
+  @Post('type-change')
+  addTypechange(@Body() createTypeChangeDto: CreateTypeChangeDto) {
+    return this.currencyConversionService.addTypeChange(createTypeChangeDto);
+  }
+
+  @Get('type-change')
+  allTypechange() {
+    return this.currencyConversionService.allTypeChange();
   }
 }
