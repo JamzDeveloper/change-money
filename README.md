@@ -55,3 +55,9 @@ $ yarn run start:prod
 | JWT_SECRET             | ThisIsMyScretToken   |
 | JWT_TIME_EXPIRATION    | 24d                  |
 
+
+
+**Nota:**
+- [https://api.money.anycemar.com/doc]
+
+Para probar la API, se recomienda cargar el archivo de Postman proporcionado en el repositorio.
